@@ -1,6 +1,6 @@
 import requests
 
-from config import URL_HHRU, VACANCY_SEARCH_FIELD, AREA, PAGE, PAGES, PER_PAGE
+from config import ConfigForHhru
 from src.api_work.abc_web_api import WorkWithWebApi
 
 
@@ -9,25 +9,15 @@ class HhruApi(WorkWithWebApi):
 
     def __init__(self,
                  text: str,
-                 vacancy_search_field: list = VACANCY_SEARCH_FIELD,
-                 area: int = AREA,
-                 page: int = PAGE,
-                 pages: int = PAGES,
-                 per_page: int = PER_PAGE
+                 area: int = ConfigForHhru.AREA,
+                 page: int = ConfigForHhru.PAGE,
+                 per_page: int = ConfigForHhru.PER_PAGE
                  ):
-        self.url = URL_HHRU
-        self.text = text
-        self.vacancy_search_field = vacancy_search_field
-        self.per_page = per_page
-        self.area = area
-        self.page = page
-        self.pages = pages
-        self.parameter: dict = {'text': self.text,
-                                'vacancy_search_field': self.vacancy_search_field,
-                                'per_page': self.per_page,
-                                'page': self.page,
-                                'pages': self.pages,
-                                'area': self.area
+        self.url = ConfigForHhru.URL_HHRU
+        self.parameter: dict = {'text': text,
+                                'area': area,
+                                'per_page': per_page,
+                                'page': page
                                 }
 
     def connect_to_api(self):
