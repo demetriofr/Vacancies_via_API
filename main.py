@@ -4,7 +4,9 @@ from src.api_work.hhru_api import HhruApi
 from src.api_work.sjru_api import SjruApi
 
 if __name__ == '__main__':
-    # hhru = HhruApi('python')
+    hhru = HhruApi('python')
+    hhru.save_data_api()
     # pp(hhru.get_data_api())
     sjru = SjruApi('python')
-    pp(sjru.get_data_api())
+    # pp(sjru.get_data_api())
+    sjru.save_data_api()

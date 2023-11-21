@@ -2,6 +2,7 @@ import requests
 
 from config import ConfigForHhru
 from src.api_work.abc_web_api import WorkWithWebApi
+from src.data_work.work_with_json import WorkWithJson
 
 
 class HhruApi(WorkWithWebApi):
@@ -31,4 +32,4 @@ class HhruApi(WorkWithWebApi):
 
     def save_data_api(self):
         """Save data with API hh.ru"""
-        pass
+        return WorkWithJson.save_data(ConfigForHhru.JSON_HHRU, self.get_data_api())
