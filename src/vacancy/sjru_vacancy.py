@@ -21,7 +21,7 @@ class SjruVacancy(WorkWithVacancy, AttrVerify, ReprVacancy, ComparisonVacancy):
         self.city = city
 
     @classmethod
-    def get_data_about_vacancy(cls, vacancy_from_json: dict) -> dict:
+    def get_data_about_vacancy(cls, vacancy_from_json: dict, unique: int) -> dict:
         """Get data about vacancy from json using JSON from the cache"""
 
         cls.name = vacancy_from_json['profession']
@@ -31,6 +31,7 @@ class SjruVacancy(WorkWithVacancy, AttrVerify, ReprVacancy, ComparisonVacancy):
         cls.city = vacancy_from_json['town']['title']
 
         vacancy_n = {
+            'unique': unique,
             'name': cls.name,
             'url': cls.url,
             'description': cls.description,
