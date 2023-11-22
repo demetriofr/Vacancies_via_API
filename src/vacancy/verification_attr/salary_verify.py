@@ -7,10 +7,15 @@ class SalaryVerify:
     @classmethod
     def verify_salary(cls, salary):
         if isinstance(salary, dict):
-            if salary["from"] >= salary["to"]:
-                return salary["from"]
-            else:
+            if (salary["from"] is not None) and (salary["to"] is not None):
+                if salary["from"] <= salary["to"]:
+                    return salary["from"]
+                elif salary["from"] >= salary["to"]:
+                    return salary["to"]
+            elif salary["from"] is None:
                 return salary["to"]
+            else:
+                return salary["from"]
         elif isinstance(salary, (int, float)):
             return salary
         else:

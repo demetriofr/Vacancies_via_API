@@ -1,9 +1,10 @@
 from src.vacancy.abc_vacancy import WorkWithVacancy
 from src.vacancy.verification_attr.attr_verify import AttrVerify
-from text import REPR_VACANCY
+from src.vacancy.mixin_repr_vacancy import ReprVacancy
+from src.vacancy.mixin_comparison_vacancy import ComparisonVacancy
 
 
-class HhruVacancy(WorkWithVacancy, AttrVerify):
+class HhruVacancy(WorkWithVacancy, AttrVerify, ReprVacancy, ComparisonVacancy):
     """Work with vacancy with hh.ru"""
 
     def __init__(self,
@@ -16,43 +17,24 @@ class HhruVacancy(WorkWithVacancy, AttrVerify):
         self.name = name
         self.url = url
         self.description = description
-        self.__salary = salary
+        self.salary = salary
         self.city = city
 
-    def __repr__(self):
-        return REPR_VACANCY.format(name=self.name,
-                                   url=self.url,
-                                   description=self.description,
-                                   salary=self.__salary,
-                                   city=self.city
-                                   )
+    def get_data_about_vacancy(self, vacancy_from_json: dict) -> dict:
+        """Get data about vacancy from json using JSON from the cache"""
 
-    def __lt__(self, other):
-        """For comparison 'less'"""
-        if isinstance(other, self.__class__):
-            return self.__salary < other.__salary
+        self.name = vacancy_from_json['name']
+        self.url = vacancy_from_json['alternate_url']
+        self.description = vacancy_from_json['snippet']['responsibility']
+        self.salary = vacancy_from_json['salary']
+        self.city = vacancy_from_json['area']['name']
 
-    def __gt__(self, other):
-        """For comparison 'more'"""
-        if isinstance(other, self.__class__):
-            return self.__salary > other.__salary
+        vacancy_n = {
+            'name': self.name,
+            'url': self.url,
+            'description': self.description,
+            'salary': self.salary,
+            'city': self.city
+            }
 
-    def __le__(self, other):
-        """For comparison 'less or equal'"""
-        if isinstance(other, self.__class__):
-            return self.__salary <= other.__salary
-
-    def __ge__(self, other):
-        """For comparison 'more or equal'"""
-        if isinstance(other, self.__class__):
-            return self.__salary >= other.__salary
-
-    def __eq__(self, other):
-        """For comparison 'equal'"""
-        if isinstance(other, self.__class__):
-            return self.__salary == other.__salary
-
-    def __ne__(self, other):
-        """For comparison 'unequal'"""
-        if isinstance(other, self.__class__):
-            return self.__salary != other.__salary
+        return vacancy_n

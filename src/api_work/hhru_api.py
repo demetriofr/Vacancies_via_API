@@ -28,7 +28,7 @@ class HhruApi(WorkWithWebApi):
 
     def get_data_api(self):
         """Get data with API hh.ru"""
-        return self.connect_to_api().json()
+        return self.connect_to_api().json()["items"]
 
     def save_data_api(self):
         """Save data with API hh.ru"""

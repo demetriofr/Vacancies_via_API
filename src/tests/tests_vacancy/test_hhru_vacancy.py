@@ -95,7 +95,7 @@ def test_hhru_vacancy_verify_salary_attr():
     assert hhru_vacancy_1.salary == 50_000
 
     hhru_vacancy_1.salary = {
-                "from": 50_000,
+                "from": None,
                 "to": 60_000,
                 "currency": "RUR",
                 "gross": False
