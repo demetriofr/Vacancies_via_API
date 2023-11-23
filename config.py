@@ -6,6 +6,7 @@ class ConfigForHhru:
 
     URL_HHRU = 'https://api.hh.ru/vacancies'
     JSON_HHRU = Path(Path(__file__).parent, 'cache', 'cache_hhru.json')
+    JSON_HHRU_VACANCY = Path(Path(__file__).parent, 'cache', 'cache_hhru_vacancy.json')
 
     AREA = 113  # Country ID (default 113 - Russia)
     PAGE = 0  # Search result page number (default = 0)

@@ -19,24 +19,3 @@ class HhruVacancy(WorkWithVacancy, AttrVerify, ReprVacancy, ComparisonVacancy):
         self.description = description
         self.salary = salary
         self.city = city
-
-    @classmethod
-    def get_data_about_vacancy(cls, vacancy_from_json: dict, unique: int) -> dict:
-        """Get data about vacancy from json using JSON from the cache"""
-
-        cls.name = vacancy_from_json['name']
-        cls.url = vacancy_from_json['alternate_url']
-        cls.description = vacancy_from_json['snippet']['responsibility']
-        cls.salary = vacancy_from_json['salary']
-        cls.city = vacancy_from_json['area']['name']
-
-        vacancy_n = {
-            'unique': unique,
-            'name': cls.name,
-            'url': cls.url,
-            'description': cls.description,
-            'salary': cls.salary,
-            'city': cls.city
-            }
-
-        return vacancy_n
