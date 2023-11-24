@@ -5,5 +5,11 @@ class WorkWithVacancy(ABC):
     """Abstract class for working with the vacancy"""
 
     @abstractmethod
-    def get_data_about_vacancy(self, vacancy, unique):
+    def __init__(self,
+                 name: str,
+                 url: str,
+                 description: str,
+                 salary: int | dict | None,
+                 city: str
+                 ):
         pass
