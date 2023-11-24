@@ -1,5 +1,6 @@
-from src.interface.main_console import main_console
-
+from src.interface.main_console import MainConsole
 
 if __name__ == '__main__':
-    main_console()
+    MainConsole.main_console()
+    # MainConsole.del_or_cut_vacancies_sjru()
+    # MainConsole.del_or_cut_vacancies_hhru()
