@@ -1,6 +1,6 @@
 
 class UrlVerify:
-    """Verification the url attribute of the Vacancy class"""
+    """Verification the url attribute of the Vacancy class."""
 
     def __init__(self, url):
         self.url = url

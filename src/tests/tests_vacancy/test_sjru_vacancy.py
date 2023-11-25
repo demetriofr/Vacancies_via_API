@@ -27,7 +27,7 @@ sjru_vacancy_2 = SjruVacancy(name_2, url_2, description_2, salary_2, city_2)
 
 
 def test_sjru_vacancy_repr():
-    """Checking the correctness of the output of information about the Vacancy class"""
+    """Checking the correctness of the output of information about the Vacancy class."""
     assert repr(sjru_vacancy_1) == REPR_VACANCY.format(name=name_1,
                                                        url=url_1,
                                                        description=description_1,

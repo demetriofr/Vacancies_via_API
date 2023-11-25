@@ -2,7 +2,7 @@ from abc import ABC, abstractmethod
 
 
 class WorkWithData(ABC):
-    """Abstract class for working with the data"""
+    """Abstract class for working with the data."""
 
     @classmethod
     @abstractmethod

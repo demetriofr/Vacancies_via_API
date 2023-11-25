@@ -1,5 +1,5 @@
 class SalaryVerify:
-    """Verification the salary attribute of the Vacancy class"""
+    """Verification the salary attribute of the Vacancy class."""
 
     def __init__(self, salary):
         self.salary = salary

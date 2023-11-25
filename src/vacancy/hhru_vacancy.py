@@ -6,7 +6,7 @@ from src.vacancy.mixin_for_vacancy.mixin_comparison_vacancy import ComparisonVac
 
 
 class HhruVacancy(WorkWithVacancy, AttrVerify, SaveDataAboutVacancy, ReprVacancy, ComparisonVacancy):
-    """Work with vacancy with hh.ru"""
+    """Work with vacancy with hh.ru."""
 
     def __init__(self,
                  name: str,

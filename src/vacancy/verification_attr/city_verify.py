@@ -1,5 +1,5 @@
 class CityVerify:
-    """Verification the city attribute of the Vacancy class"""
+    """Verification the city attribute of the Vacancy class."""
 
     def __init__(self, city):
         self.city = city

@@ -1,5 +1,5 @@
 class NameVerify:
-    """Verification the name attribute of the Vacancy class"""
+    """Verification the name attribute of the Vacancy class."""
 
     def __init__(self, name):
         self.name = name

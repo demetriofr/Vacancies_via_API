@@ -2,7 +2,7 @@ from abc import ABC, abstractmethod
 
 
 class WorkWithWebApi(ABC):
-    """Abstract class for working with the API"""
+    """Abstract class for working with the API."""
 
     @abstractmethod
     def connect_to_api(self):

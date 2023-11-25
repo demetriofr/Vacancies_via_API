@@ -1,9 +1,9 @@
 class RemoveDoubleSpacesFromJson:
-    """Remove double spaces from complex JSON"""
+    """Remove double spaces from complex JSON."""
 
     @classmethod
     def remove_double_spaces(cls, data):
-        """Remove double spaces"""
+        """Remove double spaces."""
 
         if isinstance(data, str):
             return ' '.join(data.split())

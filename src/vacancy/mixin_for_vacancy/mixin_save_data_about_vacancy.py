@@ -1,5 +1,5 @@
 class SaveDataAboutVacancy:
-    """Save data about vacancy in dictionary"""
+    """Save data about vacancy in dictionary."""
 
     def __init__(self,
                  name: str,
@@ -15,7 +15,7 @@ class SaveDataAboutVacancy:
         self.city = city
 
     def save_data_about_vacancy(self, unique: int) -> dict:
-        """Save data about vacancy"""
+        """Save data about vacancy."""
 
         vacancy_n = {
             'unique': unique,

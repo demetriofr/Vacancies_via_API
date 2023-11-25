@@ -6,7 +6,7 @@ from src.vacancy.mixin_for_vacancy.mixin_comparison_vacancy import ComparisonVac
 
 
 class SjruVacancy(WorkWithVacancy, AttrVerify, SaveDataAboutVacancy, ReprVacancy, ComparisonVacancy):
-    """Work with vacancy with superjob.ru"""
+    """Work with vacancy with superjob.ru."""
 
     def __init__(self,
                  name: str,

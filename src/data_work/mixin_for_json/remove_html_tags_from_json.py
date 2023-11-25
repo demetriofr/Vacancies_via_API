@@ -2,11 +2,11 @@ import re
 
 
 class RemoveHtmlTagsFromJson:
-    """Remove html tags from complex JSON"""
+    """Remove html tags from complex JSON."""
 
     @classmethod
     def remove_html_tags_re(cls, data):
-        """Remove html tags with re"""
+        """Remove html tags with re."""
 
         if isinstance(data, str):
             return re.sub(re.compile('<.*?>'), ' ', data)

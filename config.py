@@ -2,7 +2,7 @@ from pathlib import Path
 
 
 class ConfigForHhru:
-    """Config for hh.ru"""
+    """Config for hh.ru."""
 
     URL_HHRU = 'https://api.hh.ru/vacancies'
     JSON_HHRU = Path(Path(__file__).parent, 'cache', 'cache_hhru.json')
@@ -16,7 +16,7 @@ class ConfigForHhru:
 
 
 class ConfigForSjru:
-    """Config for superjob.ru"""
+    """Config for superjob.ru."""
 
     URL_SJRU = 'https://api.superjob.ru/2.0/vacancies/'
     JSON_SJRU = Path(Path(__file__).parent, 'cache', 'cache_sjru.json')

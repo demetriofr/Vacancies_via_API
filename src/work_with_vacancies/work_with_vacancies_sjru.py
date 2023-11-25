@@ -7,11 +7,11 @@ from src.work_with_vacancies.mixin_for_vacancies.mixin_print_data_vacancies impo
 
 
 class WorkWithVacanciesSjru(WorkWithVacancies, DeleteCutNVacancies, PrintDataVacancies):
-    """Work with vacancies with superjob.ru saved in JSON"""
+    """Work with vacancies with superjob.ru saved in JSON."""
 
     @classmethod
     def get_data_about_vacancies(cls):
-        """Get and use data about vacancies by Vacancy class"""
+        """Get and use data about vacancies by Vacancy class."""
         unique = 1
         vacancies: list = []
         cache_api = WorkWithJson.read_data(ConfigForSjru.JSON_SJRU)

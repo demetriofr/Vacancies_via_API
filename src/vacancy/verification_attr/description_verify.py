@@ -1,5 +1,5 @@
 class DescriptionVerify:
-    """Verification the description attribute of the Vacancy class"""
+    """Verification the description attribute of the Vacancy class."""
 
     def __init__(self, description):
         self.description = description

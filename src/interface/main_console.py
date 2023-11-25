@@ -9,11 +9,11 @@ from text import FINAL_PRINT
 
 
 class MainConsole(InterfaceConsole):
-    """Main console for work with interface"""
+    """Main console for work with interface."""
 
     @classmethod
     def main_console(cls):
-        """Main console for work"""
+        """Main console for work."""
 
         exit_app = 1
 
@@ -32,7 +32,7 @@ class MainConsole(InterfaceConsole):
 
     @classmethod
     def site_and_keyword(cls):
-        """Choose the site to get the API and search for the keyword"""
+        """Choose the site to get the API and search for the keyword."""
 
         site = None
 
@@ -63,7 +63,7 @@ class MainConsole(InterfaceConsole):
 
     @classmethod
     def del_or_cut_vacancies_hhru(cls):
-        """Delete or cut vacancies from list"""
+        """Delete or cut vacancies from list."""
 
         path_json_vacancy = ConfigForHhru.JSON_HHRU_VACANCY
         path_json_vacancy_del_result = ConfigForHhru.JSON_HHRU_VACANCY_DEL_RESULT
@@ -112,7 +112,7 @@ class MainConsole(InterfaceConsole):
 
     @classmethod
     def del_or_cut_vacancies_sjru(cls):
-        """Delete or cut vacancies from list"""
+        """Delete or cut vacancies from list."""
 
         path_json_vacancy = ConfigForSjru.JSON_SJRU_VACANCY
         path_json_vacancy_result = ConfigForSjru.JSON_SJRU_VACANCY_DEL_RESULT
@@ -160,7 +160,7 @@ class MainConsole(InterfaceConsole):
 
     @staticmethod
     def check_list_for_del_or_cut(list_for_check, path_json):
-        """Check the list that contains vacancy numbers to see if those numbers are in the vacancies lists"""
+        """Check the list that contains vacancy numbers to see if those numbers are in the vacancies lists."""
 
         try:
             list_of_numbers_vacancies = [key_['unique'] for key_ in WorkWithJson.read_data(path_json)]

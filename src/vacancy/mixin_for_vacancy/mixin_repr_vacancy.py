@@ -2,7 +2,7 @@ from text import REPR_VACANCY
 
 
 class ReprVacancy:
-    """Displays information about the vacancy"""
+    """Displays information about the vacancy."""
 
     def __init__(self,
                  name: str,

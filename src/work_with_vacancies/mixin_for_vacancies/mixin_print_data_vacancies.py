@@ -3,11 +3,11 @@ from src.data_work.work_with_json import WorkWithJson
 
 
 class PrintDataVacancies:
-    """Print vacancies from a JSON file"""
+    """Print vacancies from a JSON file."""
 
     @classmethod
     def print_data_vacancies(cls, path_json):
-        """Print vacancies from a JSON file"""
+        """Print vacancies from a JSON file."""
 
         cache_json = WorkWithJson.read_data(path_json)
 

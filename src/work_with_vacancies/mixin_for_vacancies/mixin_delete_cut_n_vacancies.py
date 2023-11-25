@@ -8,7 +8,7 @@ class DeleteCutNVacancies(SaveDataVacancies):
 
     @classmethod
     def delete_n_vacancies(cls, del_list: list, path_json: str, path_json_del_result: str) -> None:
-        """Delete n vacancies by list in which the vacancies numbers are transmitted"""
+        """Delete n vacancies by list in which the vacancies numbers are transmitted."""
 
         unique = 1
         vacancies: list = []
@@ -30,7 +30,7 @@ class DeleteCutNVacancies(SaveDataVacancies):
 
     @classmethod
     def cut_n_vacancies(cls, cut_list: list, path_json: str, path_json_cut_result: str) -> None:
-        """Cut n vacancies by list in which the vacancies numbers are transmitted"""
+        """Cut n vacancies by list in which the vacancies numbers are transmitted."""
 
         unique = 1
         vacancies: list = []
