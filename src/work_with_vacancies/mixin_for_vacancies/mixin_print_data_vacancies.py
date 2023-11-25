@@ -1,5 +1,3 @@
-from pprint import pprint as pp
-
 from text import PRINT_VACANCIES
 from src.data_work.work_with_json import WorkWithJson
 
